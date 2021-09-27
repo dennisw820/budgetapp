@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+a, li {
+    list-style: none;
+    text-decoration: none;
+}
+.navbar {
+    float: left;
+    position: fixed;
+}
+.container {
+    float: right;
+    height: 100vh;
+    width: calc(100vw - 30vw);
+    outline: none;
+    border: none;
+}
+#map {
+    height: calc(100vh - 7vh);
+    width: 75vw; 
+    outline: none;
+    border: none;
+}
+.geocoder {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    left: 50%;
+    margin: 60px 0 0 50px;
+    top: 15px;
+}
+.mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+    border: none;
+    outline: none;
+}

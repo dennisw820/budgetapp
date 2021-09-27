@@ -1,0 +1,90 @@
+* {
+
+}
+html {
+
+}
+body {
+    overflow: hidden;
+    background: linear-gradient(155deg, aqua 45%, #ffffff 55%);
+}
+#nav-btn {
+    display: flex;
+    transform: translate(20px, 10px);
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    padding: 6px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+#bars {
+    font-size: larger;
+}
+.navbar {
+    visibility: hidden;
+}
+ul {
+    list-style: square !important;
+}
+main {
+    height: 100vh;
+    width: 100vw;
+    margin: 80px;
+}
+header {
+    margin: auto;
+    padding: auto;
+}
+#report-form {
+    transform: translate(30%);
+    width: 90vw;
+    margin: 20px 0;
+    padding: 0;
+}
+.fields {
+    width: 50%;
+    margin: 10px 0;
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#date {
+    margin: 0 10px;
+}
+#date, #options {
+    width: 24%;
+    font-family: 'Poppins', 'Sans-serif';
+}
+textarea {
+    width: 49%;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    font-family:'Poppins','Sans-serif' ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#btn {
+    width: 54%;
+    margin: 10px 0;
+    padding: 25px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(115deg, #ffffff, aqua);
+}
+#btn:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s;
+}

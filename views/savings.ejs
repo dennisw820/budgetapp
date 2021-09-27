@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a budget web app tool created by Dennis Williams">
+
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/savings.css">
+    <link rel="icon" type="image" href="https://img.icons8.com/dusk/2x/coin-in-hand.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    
+    <title>Budget App | Savings</title>
+</head>
+<body>
+    <button class="notification" type="button" onclick="">
+        <i class="fas fa-bell bell"></i>
+        <div class="notification-count">10</div>
+    </button>
+
+    <div id="navbar" class="navbar">
+        
+        <div class="app-logo">
+            <button id="menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+            <span class="app-name">
+                <a href="#">BudgetApp</a>
+            </span>
+        </div>
+        <div class="profile">
+            <center>
+                <img id="profile-pic" src="../IMG/forbes.png" alt="Profile Picture">
+                <h3>John Doe</h3>
+                <a href="../HTML/profile.html" target="_self">View Profile</a>
+            </center>
+        </div>
+        <div class="links-area">
+            <ul>
+                <li class="list"><a href="../HTML/index.html" class="links"><i class="fas fa-home icons"></i> <span class="nav-items">Summary</span></a></li>
+                <li class="list"><a href="../HTML/expenses.html" class="links"><i class="fas fa-hand-holding-usd icons"></i> <span class="nav-items">Expenses</span></a></li>
+                <li class="list"><a href="../HTML/income.html" class="links"><i class="fas fa-wallet icons"></i> <span class="nav-items">Income</span></a></li>
+                <li class="list"><a href="../HTML/savings.html" class="links"><i class="fas fa-piggy-bank icons"></i> <span class="nav-items">Savings</span></a></li>
+                <li class="list"><a href="../HTML/atm-map.html" class="links"><i class="fas fa-map-marked-alt icons"></i> <span class="nav-items">ATM Map</span></a></li>
+                <li class="list"><a href="../HTML/report-error.html" class="links"><i class="fas fa-bug icons"></i> <span class="nav-items">Report Issue</span></a></li>
+            </ul>
+        </div>
+        <div class="app-info">
+            <p class="app-details">Version 1.0</p>
+            <p class="app-details">Copyright BudgetApp 2021 &copy;</p>
+        </div>
+        <!--<button id="button"><a href="../HTML/login.html" style="color: black;"> Logout <i class="fas fa-sign-out-alt"></i></a></button>-->
+        <ul>
+            <li class="list"><a href="" class="links"><i class="fas fa-sign-out-alt icons"></i> <span class="nav-items">Logout</span></a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="wrapper">
+            <div id="banner">
+                <h1 class="banner-greeting"><center>Good Evening!</center></h1>
+            </div>
+            <div class="btn-grp">
+                <button id="view-savings" class="tab">View Savings</button>
+                <button id="add-savings" class="tab">Add Savings</button>
+            </div>
+            <div id="savings"></div>
+            <div id="new-savings">
+                <h1 id="savings-title">Savings</h1>
+                <form action="" method="POST">
+                    <label for="">Title</label>
+                    <br>
+                    <input class="savings-fields" name="title" type="text" placeholder="Name of Expense" required>
+                    <br>
+                    <label for="">Category</label>
+                    <br>
+                    <input class="savings-fields" name="category" type="text" placeholder="Expense Category" required>
+                    <br>
+                    <label for="">Amount</label>
+                    <br>
+                    <input class="savings-fields" name="amount" type="text" placeholder="Amount ($)" required>
+                    <br>
+                    <label for="">Date</label>
+                    <br>
+                    <input class="savings-fields" name="date" type="date" placeholder="Date" required>
+                    <br>
+                    <button id="submit-savings" onclick="">Add Savings</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<script type="text/javascript" src="../JS/index.js"></script>
+</html>

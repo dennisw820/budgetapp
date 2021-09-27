@@ -1,0 +1,36 @@
+#notifications {
+    margin: 15px;
+    display: block;
+    position: absolute;
+    z-index: 100;
+    max-height: max-content;
+    max-width: 75%;
+    background: rgba(238, 234, 234, 0.945);
+}
+#notification {
+    height: 25%;
+    width: 85%;
+    padding: 0 20px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 5px;
+}
+.close {
+    outline: none;
+    border: none;
+    position: absolute;
+    float: right;
+}
+.img {
+    max-height: 50%;
+    max-width: 50%;
+    border-radius: 50px;
+    position: relative;
+    float: left;
+}
+.title {
+
+}
+.content {
+    font-size: medium;
+}

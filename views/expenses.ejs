@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a budget web app tool created by Dennis Williams">
+
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/expenses.css">
+    <link rel="icon" type="image" href="https://img.icons8.com/dusk/2x/coin-in-hand.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    
+    <title>Budget App | Expenses</title>
+</head>
+<body>
+    <button class="notification" type="button" onclick="">
+        <i class="fas fa-bell bell"></i>
+        <div class="notification-count">10</div>
+    </button>
+
+    <div id="navbar" class="navbar">
+        
+        <div class="app-logo">
+            <button id="menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+            <span class="app-name">
+                <a href="#">BudgetApp</a>
+            </span>
+        </div>
+        <div class="profile">
+            <center>
+                <img id="profile-pic" src="../IMG/forbes.png" alt="Profile Picture">
+                <h3>John Doe</h3>
+                <a href="../HTML/profile.html" target="_self">View Profile</a>
+            </center>
+        </div>
+        <div class="links-area">
+            <ul>
+                <li class="list"><a href="../HTML/index.html" class="links"><i class="fas fa-home icons"></i> <span class="nav-items">Summary</span></a></li>
+                <li class="list"><a href="../HTML/expenses.html" class="links"><i class="fas fa-hand-holding-usd icons"></i> <span class="nav-items">Expenses</span></a></li>
+                <li class="list"><a href="../HTML/income.html" class="links"><i class="fas fa-wallet icons"></i> <span class="nav-items">Income</span></a></li>
+                <li class="list"><a href="../HTML/savings.html" class="links"><i class="fas fa-piggy-bank icons"></i> <span class="nav-items">Savings</span></a></li>
+                <li class="list"><a href="../HTML/atm-map.html" class="links"><i class="fas fa-map-marked-alt icons"></i> <span class="nav-items">ATM Map</span></a></li>
+                <li class="list"><a href="../HTML/report-error.html" class="links"><i class="fas fa-bug icons"></i> <span class="nav-items">Report Issue</span></a></li>
+            </ul>
+        </div>
+        <div class="app-info">
+            <p class="app-details">Version 1.0</p>
+            <p class="app-details">Copyright BudgetApp 2021 &copy;</p>
+        </div>
+        <!--<button id="button"><a href="../HTML/login.html" style="color: black;"> Logout <i class="fas fa-sign-out-alt"></i></a></button>-->
+        <ul>
+            <li class="list"><a href="../HTML/login.html" class="links"><i class="fas fa-sign-out-alt icons"></i> <span class="nav-items">Logout</span></a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="wrapper">
+            <div id="banner">
+                <h1 class="banner-greeting"><center>Good Evening!</center></h1>
+            </div>
+            <div class="btn-grp">
+                    <button id="view-expense" class="tab" onclick="showExpenses()">View Expenses</button>
+                    <button id="add-expense" class="tab" onclick="addExpense()">Add Expense</button>
+            </div>
+            <div id="expenses">
+                <center><h1 id="expense-heading">Expenses</h1></center>
+                
+                <div class="expenses-table">
+                    <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Due Date</th>
+                                <th>Date Added</th>
+                            </tr>
+                        <tbody>
+                            <tr>
+                                <td>Gas</td>
+                                <td>Transportation</td>
+                                <td>$35.00</td>
+                                <td>4/29/2021</td>
+                                <td>4/13/2021</td>
+                            </tr>
+                            <tr>
+                                <td>Gas</td>
+                                <td>Transportation</td>
+                                <td>$35.00</td>
+                                <td>4/29/2021</td>
+                                <td>4/13/2021</td>
+                            </tr>
+                            <tr>
+                                <td>Gas</td>
+                                <td>Transportation</td>
+                                <td>$35.00</td>
+                                <td>4/29/2021</td>
+                                <td>4/13/2021</td>
+                            </tr>
+                            <tr>
+                                <td>Gas</td>
+                                <td>Transportation</td>
+                                <td>$35.00</td>
+                                <td>4/29/2021</td>
+                                <td>4/13/2021</td>
+                            </tr>
+                            <tr>
+                                <td>Gas</td>
+                                <td>Transportation</td>
+                                <td>$35.00</td>
+                                <td>4/29/2021</td>
+                                <td>4/13/2021</td>
+                            </tr>
+                            <tr>
+                                <td>Gas</td>
+                                <td>Transportation</td>
+                                <td>$35.00</td>
+                                <td>4/29/2021</td>
+                                <td>4/13/2021</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="new-expense">
+                <h1 id="expense-title">New Expense</h1>
+                <div id="expense-body">
+                    <form>
+                        <label for="">Title</label>
+                        <br>
+                        <input id="title" class="expense-fields" name="title" type="text" placeholder="Name of Expense" required>
+                        <br>
+                        <label for="">Category</label>
+                        <br>
+                        <input id="category" class="expense-fields" name="category" type="text" placeholder="Expense Category" required>
+                        <br>
+                        <label for="">Amount</label>
+                        <br>
+                        <input id="amount" class="expense-fields" name="amount" type="text" placeholder="Amount ($)" required>
+                        <br>
+                        <label for="">Date</label>
+                        <br>
+                        <input id="date" class="expense-fields" name="date" type="date" placeholder="Date" required>
+                        <br>
+                        <button id="submit-expense" onclick="submitData()">Add Expense</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; This project was created by Dennis Williams 2021
+    </footer>
+    <script src="../JS/index.js"></script>
+</body>
+
+<script>
+    //Expenses: Show Expenses and Add Expense Form
+    var viewExpenses = document.getElementById('view-expense');
+    var addExpense = document.getElementById('add-expense');
+    var expenses = document.getElementById('expenses');
+    var newExpense = document.getElementById('new-expense');
+    var submitBtn = document.getElementById('submit-expense');
+
+    viewExpenses.addEventListener('click', function showExpenses() {
+        addExpense.classList.remove('active');
+        viewExpenses.classList.add('active');
+        newExpense.style.visibility = 'hidden';
+        viewExpenses.style.visibility = 'visible';
+        var table = `
+            <table style="width:100%">
+                <tr>
+                    <th>Name</th>
+                    <th colspan="2">Telephone</th>
+                </tr>
+                <tr>
+                    <td>Bill Gates</td>
+                    <td>55577854</td>
+                    <td>55577855</td>
+                </tr>
+            </table>
+        `
+        for (var i = 0; i.length > 0; i++) {
+            expenses.innerHTML = table;
+        }
+        showExpenses();
+    });
+
+    addExpense.addEventListener('click', function addExpense(){
+        viewExpenses.classList.remove('active');
+        addExpense.classList.add('active');
+        expenses.style.visibility = 'hidden';
+        newExpense.style.visibility = 'visible';
+        addExpense();
+    });
+
+    submitBtn.addEventListener('submit', function submitData(){
+        try{
+            var title = document.getElementById('title').value;
+            var category = document.getElementById('category').value;
+            var amount = document.getElementById('amount').value;
+            var date = document.getElementById('date').value;
+
+            console.log(title, category, amount, date);
+        }
+        catch{
+            throw 'Unable to get data. Please try again or contact your admin.';
+        }
+        submitData();
+    });
+</script>
+-->
+</html>

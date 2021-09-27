@@ -1,0 +1,32 @@
+<%- include ('partials/markup.ejs') %>
+<%- include ('partials/navbar.ejs') %> 
+    <main>
+        <header>
+            <center>
+                <h1 id="title">BudgetApp - Error Reporting</h1>
+                <p id="description">Fill out the form below to report an issue.</p>
+            </center>        
+        </header>
+        <div id="report-form">
+            <form action="" method="POST">
+                <input class="fields" type="text" minlength="1" maxlength="75" placeholder="First Name" required>
+                <br>
+                <input class="fields" type="text" minlength="1" maxlength="75" placeholder="Last Name" required>
+                <br>
+                <input class="fields" type="email" minlength="1" maxlength="40" placeholder="Email Address" required>
+                <br>
+                <select id="options" class="fields" name="" id="" required>
+                    <option value="Select Issue Category" selected>Select Issue Category</option>
+                    <option value="Login">Login</option>
+                    <option value="Data Entry">Data Entry</option>
+                    <option value="System Malfunction">System Malfunction</option>
+                </select>
+                <input id="date" class="fields" type="date" placeholder="Date" required>
+                <br>
+                <textarea name="" id="" cols="30" rows="10" minlength="1" maxlength="500" placeholder="Issue description..." required></textarea>
+                <br>
+                <input id="btn" type="submit" value="Submit Issue">
+            </form>
+        </div>
+    </main>
+    <%- include ('partials/chat.ejs') %>
