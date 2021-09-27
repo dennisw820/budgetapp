@@ -8,7 +8,8 @@ require('dotenv').config();
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
-
+app.use(express.static('CSS'));
+app.use(express.static('IMG'));
 // Routes
 
     // Home
@@ -60,6 +61,14 @@ app.get('/login', (req, res) => {
 });
 app.post('/', () => {
     
+});
+
+    // Logout
+app.get('/logout', (req, res) => {
+    res.write('You have been successfully logged out.')
+});
+app.post('/', () => {
+
 });
 
     // User Registration
