@@ -1,6 +1,8 @@
 const express = require('express');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
+const db = require('./API/v1/src/database/db.js');
+const router = require('./API/v1/src/routes/router.js');
 
 const app = express();
 // Configure dotenv
@@ -10,6 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('CSS'));
 app.use(express.static('IMG'));
+app.use('/', router);
 // Routes
 
     // Home
@@ -103,6 +106,6 @@ app.post('/', () => {
     
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3300, () => {
     console.log(`Server running on port ${process.env.PORT}.`);
 });
