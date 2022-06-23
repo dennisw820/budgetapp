@@ -32,6 +32,7 @@ module.exports.createData = async() => {
     }
     var query = `INSERT INTO expenses (title, category,amount) VALUES(${data.title}, ${data.category}, ${data.amount})`;
     db.query(query);
+    db.end();
 }
 
 module.exports.updateData = async() => {
