@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('CSS'));
 app.use(express.static('IMG'));
-app.use('/', router);
+app.use('/expenses', router);
 // Routes
 
     // Home
