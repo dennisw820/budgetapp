@@ -2,7 +2,7 @@ const express = require('express');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const db = require('./API/v1/src/database/db.js');
-const router = require('./API/v1/src/routes/router.js');
+const expenseRouter = require('./API/v1/src/routes/expenseRouter.js');
 
 const app = express();
 // Configure dotenv
@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('CSS'));
 app.use(express.static('IMG'));
-app.use('/expenses', router);
+app.use('/expenses', expenseRouter);
 // Routes
 
     // Home

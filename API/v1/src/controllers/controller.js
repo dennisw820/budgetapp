@@ -1,14 +1,53 @@
-const router = require('../routes/router');
+const router = require('../routes/expenseRouter');
 
-module.exports.getData  = async () => {
+module.exports.getItem  = async (req, res, err, id, results, next) => {
+    // Get ID
+    const id = req.params.id;
 
+    // Write & Execute Query 
+    var query = `SELECT * from expenses WHERE id = ${id};`;
+    try {
+        await db.query(query);
+        res.status(200).json({
+            status: "OK",
+            "message": "Submission successful.",
+            data: results
+        })
+
+    }
+    catch (err) {
+        res.status(400).json({
+            status: "Failed",
+            "message": "sorry, your submission was unsuccessful."
+        })
+    }
+    db.destroy();
+    next();
 }
 
-module.exports.getAllData = async() => {
-    
+module.exports.getAllItems = async(req, res, err, results, next) => {
+    // Write & Execute Query 
+    var query = `SELECT * from expenses;`;
+    try {
+        db.query(query);
+        res.status(200).json({
+            status: "OK",
+            "message": "Submission successful.",
+            data: results
+        })
+
+    }
+    catch (err) {
+        res.status(400).json({
+            status: "Failed",
+            "message": "sorry, your submission was unsuccessful."
+        })
+    }
+    db.destroy();
+    next();
 }
 
-module.exports.createData = async() => {
+module.exports.createItem = async(req, res, err, next) => {
     // Get Data
     const {data} = req.body;
     // Validate Data
@@ -30,14 +69,69 @@ module.exports.createData = async() => {
         data.category,
         amount: data.amount
     }
-    var query = `INSERT INTO expenses (title, category,amount) VALUES(${data.title}, ${data.category}, ${data.amount})`;
-    db.query(query);
-    db.end();
+    // Query DB & Send confirmation
+    var query = `INSERT INTO expenses (title, category, amount) VALUES(${newExpense.title}, ${newExpense.category}, ${newExpense.amount})`;
+    try {
+        db.query(query);
+        res.status(200).json({
+            status: "OK",
+            "message": "Data submission sucessful"
+        })
+    }
+    catch(err) {
+        res.status(400).json({
+            status: "Failed",
+            "message": "Sorry, your submission was unsuccessful."
+        })
+    }
+    db.destroy();
+    next();
 }
 
-module.exports.updateData = async() => {
-    
+// Review Cases for Updating Different Properties
+module.exports.updateItem = async(req, res, id, updateData, err, next) => {
+    // Get ID & Data to Update
+    const id = req.params.id;
+    const updatedData = req.body;
+
+    // Write & Execute Query 
+    var query = `UPDATE expenses SET /*property.to.change*/ = /*thing.to.change*/ WHERE id = ${id}`;
+    try {
+        db.query(query);
+        res.status(200).json({
+            status: "OK",
+            "message": "Submission successful."
+        })
+
+    }
+    catch (err) {
+        res.status(400).json({
+            status: "Failed",
+            "message": "sorry, your submission was unsuccessful."
+        })
+    }
+    db.destroy();
+    next();
 }
-module.exports.deleteData = async() => {
-    
+module.exports.deleteItem = async(req, res, id, err, next) => {
+    // Get ID
+    const id = req.params.id;
+
+    // Write & Execute Query 
+    var query = `DELETE FROM expenses WHERE id = ${id};`;
+    try {
+        db.query(query);
+        res.status(200).json({
+            status: "OK",
+            "message": "Submission successful."
+        })
+    }
+    catch (err) {
+        res.status(400).json({
+            status: "Failed",
+            "message": "sorry, your submission was unsuccessful."
+        })
+    }
+    db.destroy();
+    next();
 }
