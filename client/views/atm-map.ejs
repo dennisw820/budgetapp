@@ -1,0 +1,18 @@
+<%- include ('partials/markup.ejs') %> 
+<%- include ('partials/navbar.ejs') %> 
+    <title>Budget App | ATM Map</title>
+
+    <div class="container">
+
+        <div id='map'></div>
+        <div id="geocoder" class="geocoder"></div>
+
+    </div>
+<script type="text/javascript" src="../JS/index.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+<script type="text/javascript" src="../JS/map.js"></script>
+
+<%- include ('partials/chat.ejs') %> 

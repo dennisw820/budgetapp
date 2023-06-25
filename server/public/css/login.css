@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+.wrapper {
+    
+    
+}
+.bg-svg {
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, cyan, #ffffff);
+    top: 25%;
+    right: 65%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+#login-svg {
+    height: 70vh;
+    width: 55vw;
+    position: fixed;
+    padding: 0;
+    left: -10%;
+    top: 30%;
+    z-index: -1;
+}
+#login-box {
+    height: 100vh;
+    width: 60vw;
+    padding: 70px;
+    border-radius: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    float: right;
+}
+/*#photo {
+    
+    height: 150px;
+    width: 150px;
+    margin: 0 0 30px;
+    border-radius: 50px 50px 50px 50px;
+}*/
+#logo {
+    font-size: 30px;
+    color: black;
+}
+p {
+    margin: 0 0 30px;
+}
+#usrname {
+    width: 90%;
+    margin: 0 0 15px;
+    padding: 25px;
+    outline: none;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    background: #e7e7e7;
+    font-family: 'Poppins', sans-serif;
+}
+#passwd {
+    width: 90%;
+    margin: 0 0 30px;
+    padding: 25px;
+    outline: none;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    background: #e7e7e7;
+    font-family: 'Poppins', sans-serif;
+}
+input[type="checkbox"] {
+    margin: 0 15px 20px 0;
+}
+.forgot {
+    display: inline;
+    float: right;
+    color: black;
+}
+#login {
+    width: 100%;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffffff, cyan);
+    outline: none;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    cursor: pointer;
+
+}
+#login:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s;
+
+}
+#create-account {
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 25px;
+    background: black;
+    outline: none;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    color: #ffffff;
+    cursor: pointer;
+}
+#create-account:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s;
+}
+.bg-svg2 {
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background-color: black;
+    top: 100%;
+    left: 75%;
+    transform: translateY(-50%);
+    z-index: -1;
+}

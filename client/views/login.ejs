@@ -1,0 +1,28 @@
+<%- include ('partials/markup.ejs') %> 
+
+    <div class="wrapper">
+        <div class="bg-svg"></div>
+        <img id="login-svg" src="../IMG/investing.png" alt="">
+
+        <div id="login-box">
+            <center>
+                <a id="logo" href="../HTML/index.html"><h1>BudgetApp <i class="fas fa-dollar-sign"></i></h1></a>
+                <p>Take control of your financial freedom.</p>
+                <!--<img id="photo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.vfUtirjQYRe7uKkKEWA7OQHaHa%26pid%3DApi&f=1" alt="">-->
+            </center>
+            <form method="POST" action="/login">
+                <input id="usrname" class="input" type="text" placeholder="Username or Email" minlength="1" required>
+                <br>
+                <input id="passwd" class="input" type="password" placeholder="Password" minlength="1" required>
+                <br>
+                <input id="checkbox" type="checkbox"> Remember Me
+                <a class="forgot" href="/forgot-password">Forgot Password?</a>
+                <br>
+                <input id="login" class="" type="submit" value="Login">
+                <button id="create-account" class=""><a href="/signup" style="color: #ffffff;">Create Account</a></button>
+            </form>
+        </div>
+        <div class="bg-svg2"></div>
+    </div>
+    <script type="text/javascript" src="../JS/action.js"></script>
+<%- include ('partials/chat.ejs') %> 

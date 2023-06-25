@@ -1,0 +1,103 @@
+/*****************************************************************
+*
+*   Arthour: Dennis Williams
+*   Title: Budget App
+*
+*****************************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: linear-gradient(cyan 70%, rgba(238, 234, 234, 0.945) 30%);
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+}
+a, ul,li {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+.wrapper {
+    transform: translate(60px, 80px);
+    height: 75vh;
+    width: 80vw;
+    padding: 40px 40px 40px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #ffffff;
+    z-index: 1; 
+
+}
+.profile-info {
+    display: flex;
+    margin: 20px 0;
+}
+img {
+    height: 175px;
+    width: 175px;
+    border-radius: 100px 100px 100px 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#edit-pic {
+    display: flex;
+    height: 30px;
+    width: 300px;
+    margin: 10px 0;
+    background: none;
+}
+.profile-name {
+    justify-content: start;
+    width: 600px;
+}
+p {
+    font-size: large;
+}
+.profile-details {
+    margin: 20px 0;
+}
+td {
+    padding: 10px 0 10px 0;
+}
+label {
+    margin: 0 200px 0 30px;
+}
+.input {
+    width: 300px;
+    padding: 10px;
+    outline: none;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+button {
+    float: right;
+    border-radius: 50px 50px 50px 50px;
+    padding: 20px;
+    background: linear-gradient(135deg, cyan, #ffffff);
+    border: none;
+    outline: none;
+}
+button:hover {
+    float: right;
+    border-radius: 50px 50px 50px 50px;
+    padding: 20px;
+    background: linear-gradient(135deg, cyan, #ffffff);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+i {
+    margin: 0 0 0 5px;
+}

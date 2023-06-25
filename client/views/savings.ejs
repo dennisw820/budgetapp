@@ -1,0 +1,38 @@
+<%- include ('partials/markup.ejs') %> 
+<%- include ('partials/navbar.ejs') %> 
+
+    <main>
+        <div class="wrapper">
+            <div id="banner">
+                <h1 class="banner-greeting"><center>Good Evening!</center></h1>
+            </div>
+            <div class="btn-grp">
+                <button id="view-savings" class="tab">View Savings</button>
+                <button id="add-savings" class="tab">Add Savings</button>
+            </div>
+            <div id="savings"></div>
+            <div id="new-savings">
+                <h1 id="savings-title">Savings</h1>
+                <form action="" method="POST">
+                    <label for="">Title</label>
+                    <br>
+                    <input class="savings-fields" name="title" type="text" placeholder="Name of Expense" required>
+                    <br>
+                    <label for="">Category</label>
+                    <br>
+                    <input class="savings-fields" name="category" type="text" placeholder="Expense Category" required>
+                    <br>
+                    <label for="">Amount</label>
+                    <br>
+                    <input class="savings-fields" name="amount" type="text" placeholder="Amount ($)" required>
+                    <br>
+                    <label for="">Date</label>
+                    <br>
+                    <input class="savings-fields" name="date" type="date" placeholder="Date" required>
+                    <br>
+                    <button id="submit-savings" onclick="">Add Savings</button>
+                </form>
+            </div>
+        </div>
+    </main>
+<%- include ('partials/chat.ejs') %> 

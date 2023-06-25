@@ -1,0 +1,62 @@
+<%- include ('partials/markup.ejs') %> 
+<%- include ('partials/navbar.ejs') %> 
+
+    
+    <div class="wrapper">
+        <a id="logo" href="/" target="_self"><h1>BudgetApp <i class="fas fa-dollar-sign"></i></h1></a>
+        <div class="profile-info">
+            <div>
+                <img id="" src="../IMG/forbes.png" alt="Profile Picture">
+                <a id="edit-pic" type="file" href="">Change Profile Picture</a>
+            </div>
+            <div>
+                <h1 class="profile-name">John Doe</h1>
+                <br>
+                <p>Birthday: January 26, 1984</p>
+                <p>Sex: M</p>
+                <p>Address: 31 Spooner St, Quahog, Rhode Island 54286
+                <p>Phone: 401.725.8824</p>
+                    <p>Plan:  Basic</p>
+            </div>
+        </div>
+
+        <div class="profile-details">
+            <ul>
+                <form method="GET" action="">
+                    <h2>Account Details</h2>
+                    <table>
+                        <tr>
+                            <td><label for="">Full Name</label></td>
+                            <td><input type="text" name="" id="" class="input" value="John Doe"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Username</label></td>
+                            <td><input type="text" name="" id="" class="input" value="JDoe42"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Email</label></td>
+                            <td><input type="text" name="" id="" class="input" value="Jdoe42@mail.com"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Password</label></td>
+                            <td><input type="password" name="" id="" class="input" value="John Doe"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Language</label></td>
+                            <td>
+                                <select>
+                                    <option value="English" selected>English</option>
+                                    <option value="Spanish">Spanish</option>
+                                    <option value="French">French</option>
+                                </select>
+                            </td>
+                        </tr>
+                            
+                            
+                    </table>
+                    <button>Edit <i class="fas fa-edit"></i></button>
+                </form>
+            </ul>
+        </div>
+    </div>
+<%- include ('partials/chat.ejs') %> 

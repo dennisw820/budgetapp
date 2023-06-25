@@ -1,0 +1,39 @@
+<%- include ('partials/markup.ejs') %> 
+<%- include ('partials/navbar.ejs') %> 
+
+    <main>
+        <div class="wrapper">
+            <div id="banner">
+                <h1 class="banner-greeting"><center>Good Evening!</center></h1>
+            </div>
+            <div class="btn-grp">
+                <button id="view-income" class="tab">View Income</button>
+                <button id="add-income" class="tab">Add Income</button>
+            </div>
+            <div id="income"></div>
+            <div id="new-income">
+                <h1 id="income-title">Income</h1>
+                <form action="" method="POST">
+                    <label for="">Title</label>
+                    <br>
+                    <input class="income-fields" name="title" type="text" placeholder="Name of Expense" required>
+                    <br>
+                    <label for="">Category</label>
+                    <br>
+                    <input class="income-fields" name="category" type="text" placeholder="Expense Category" required>
+                    <br>
+                    <label for="">Amount</label>
+                    <br>
+                    <input class="income-fields" name="amount" type="text" placeholder="Amount ($)" required>
+                    <br>
+                    <label for="">Date</label>
+                    <br>
+                    <input class="income-fields" name="date" type="date" placeholder="Date" required>
+                    <br>
+                    <button id="submit-income" onclick="">Add Income</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<%- include ('partials/chat.ejs') %> 

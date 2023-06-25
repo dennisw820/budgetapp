@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient( 179.4deg,  #ffff 21.8%, aqua 77.1% );
+}
+/*.navbar {
+    display: none;
+}*/
+main {
+
+}
+.wrapper {
+    display: flexbox;
+}
+.btn-grp {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+.tab {
+    width: 35%;
+    padding: 15px;
+    justify-content: center;
+    outline: none;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: transparent;
+    font-size: medium;
+    cursor: pointer;
+    transition: all .5;
+}
+.active, #add-expense:hover, #view-expense:hover {
+    background-color: aqua;
+    opacity: 0.7;
+}
+#view-expense {
+    border-radius: 5px 0 0 5px;
+}
+#add-expense {
+    border-radius: 0 5px 5px 0;
+}
+
+
+/*#expenses {
+    height: calc(100% - 20%);
+    width: calc(100% - 20%);
+}*/
+
+/* Table */
+#expense-heading {
+    padding: 0 0 30px;
+}
+.expenses-table {
+    display: flex;
+    justify-content: space-around;
+}
+#expenses {
+    background-color:#ffff;
+    height: 60%;
+    width: 75%;
+    padding: 30px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 12px 5px rgba(32, 32, 32, .3);
+}   
+table {
+    width: 100%;
+    max-height: max-content;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: 2;
+    border-radius: 20px;
+    border-collapse: collapse;
+}
+th {
+    background-color: aqua;
+    text-transform: uppercase;
+}
+th, td {
+    padding: 15px;
+}
+tr {
+    padding: 15px;
+    background-color: #ffff;
+    text-align: center;
+}
+tr:nth-child(even) {
+    padding: 15px;
+    background-color: rgba(93, 250, 229, 0.13);
+    text-align: center;
+}
+
+#new-expense {
+    height: 50%;
+    width: 75%;
+    padding: 30px;
+    margin: auto;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#expense-title {
+    display: flex;
+    justify-content: center;
+}
+.expense-fields {
+    width: calc(100% - 25%);
+    margin: 10px 0 10px 0;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(228, 228, 228, 0.993);
+    font-family: 'Poppins', 'Sans-serif';
+}
+#submit-expense {
+    width: 50%;
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: aqua;
+    cursor: pointer;
+}
+#submit-expense:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s;
+}

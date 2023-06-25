@@ -1,0 +1,287 @@
+/*****************************************************************
+*
+*   Arthour: Dennis Williams
+*   Title: Budget App
+*
+*****************************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+
+}
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(238, 234, 234, 0.945);
+    /*background-image: linear-gradient(rgba(15, 248, 248, 0.836) 40%, #ebebf1c4 40%);*/
+    font-family: 'Poppins', sans-serif;
+}
+a, ul>li {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+/*Header*/
+.nav-header {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 7vh;
+    background-color: #ffffff;
+}
+#menu-btn {
+    padding: 0 20px ;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.bars {
+    font-size: 25px;
+}
+.app-name {
+    padding: 0 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.notification {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: rgba(238, 234, 234, 0.945);
+    cursor: pointer;
+}
+.bell {
+    font-size: 23px;
+
+}
+.notification-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(19px, -33px);
+    border: none;
+    outline: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background-color: red;
+    padding: 6px;
+    position: absolute;
+    color: #ffffff;
+}
+
+/*Navbar*/
+.navbar {
+    /*display: none;*/
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: /*calc(100vw - 75vw)*/ /*60px*/;
+    float: left;
+    padding: 10px 10px;
+    z-index: 10;
+    background: linear-gradient(135deg, cyan, white 70%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.8s ease;
+}
+header {
+    height: ;
+    width: ;
+}
+.app-logo {
+    display: flex;
+    height: 5%;
+    width: 100%;
+    padding-top: 20px;
+}
+#menu {
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    background-color: aqua;
+    font-size: 25px;
+    cursor: pointer;
+}
+.profile {
+    margin: 30px 0 30px 0;
+}
+#profile-pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px 50px 50px 50px;
+}
+.links-area {
+    width: 100%;
+}
+.icons {
+    min-width: 50px;
+    font-size: 25px;
+    line-height: 50px;
+}
+.nav-items {
+    /*display: none;*/
+    font-size: 17px;
+    line-height: 30px;
+}
+.list {
+    padding: 15px;
+}
+.list:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.links {
+    color: black
+}
+i {
+    padding: 0;
+    color: black;
+}
+.app-info {
+    margin: 30px 0 30px 0;
+    padding: 15px;
+}
+.app-details {
+    padding: 0 0 10px 0;
+}
+#button {
+    width: 80%;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, cyan , white );
+    cursor: pointer;
+    color: black;
+}
+#button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s;
+    
+}
+
+/*Wrapper*/
+.wrapper {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    float: right;
+}
+#banner {
+    z-index: 1;
+    height: 12%;
+    width: 100%;
+    background-image: url("https://images.pexels.com/photos/219998/pexels-photo-219998.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.banner-greeting {
+    padding: 40px 0;
+    color: #ffffff;
+}
+.btn-grp {
+    width: 800px;
+    margin: 0 0 15px;
+    padding: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#view-expense {
+    border-radius: 0px 8px 8px 0px;
+}
+#add-expense {
+    border-radius: 0px 8px 8px 0px;
+}
+.tabs {
+    width: 800px;
+    margin: 1%;
+    padding: 10px;
+    border: 0px aqua solid;
+    outline: none;
+    cursor: pointer;
+}
+.tabs:hover {
+    width: 800px;
+    margin: 1%;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+.category {
+    display: grid;
+    place-items: center;
+    margin: 10px;
+    height: 15vh;
+    width: 20vw;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#chat-bubble {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: aqua;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/*Loading*/
+:empty {
+    height: 10px;
+    background-image: linear-gradient(90deg, #eee 8%, #dadada 18%, #eee 34%):
+    animation: loader 3s infinite linear;
+}
+@keyframes loader {
+    0% {
+        background-position: -320px;
+    }
+    100% {
+        background-position: 320px;
+    }
+}
+
+/* Mobile Layout */
+
+/* Tablet Layout */
+
+/* Desktop Layout */
